@@ -10,6 +10,4 @@ app.get('/style.css', function(req,res) {
 	res.sendFile(path.join(__dirname + '/html/style.css'))
 });
 
-app.listen(3000, function() {
-	console.log('Example app listening on port 3000');
-});
+app.listen(5000, '172.26.9.56');
