@@ -5,10 +5,7 @@ const fs = require('fs');
 
 var cors = require('cors');
 app.use(cors());
-
-// const csv=require('csvtojson')
-
-// const csvFilePath='./data.csv'
+app.use('/static', express.static(path.join(__dirname, 'static')));
 
 const sqlite3 = require('sqlite3')
 
@@ -17,23 +14,9 @@ let db = new sqlite3.Database("./mydb.sqlite3", (err) => {
         console.log('Error when connnecting to the database', err) 
     } else { 
         console.log('Database connected!') 
-		/* Put code to create table(s) here */
-		
     } 
 })
 
-// db.all("SELECT * FROM main", (err, rows) => {
-// 	if (err) {
-// 		console.log("Error quering data", err)
-// 	} else {
-// 		console.log(rows)
-// 	}
-// })
-
-// const createTable = () => {
-//     console.log("create database table contacts");
-//     db.run("INSERT INTO main (name, status) VALUES('Angus', 1)");
-// }
 
 var data = null;
 function getName(item) {
@@ -52,7 +35,9 @@ app.get('/style.css', function(req,res) {
 	res.sendFile(path.join(__dirname + '/html/style.css'))
 });
 
-
+app.get('/app/status-app', function(req,res) {
+	res.sendFile(path.join(__dirname + '/html/index.html'))
+});
 
 app.get('/app/status-app/api/init', function(req, res) {
 	if (data == null) {
