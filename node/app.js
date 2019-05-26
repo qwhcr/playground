@@ -3,6 +3,9 @@ var app = express();
 var path = require('path')
 const fs = require('fs');
 
+var cors = require('cors');
+app.use(cors());
+
 // const csv=require('csvtojson')
 
 // const csvFilePath='./data.csv'
