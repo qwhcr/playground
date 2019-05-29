@@ -7,6 +7,19 @@ var cors = require('cors');
 app.use(cors());
 app.use('/static', express.static(path.join(__dirname, 'static')));
 
+
+app.get('/', function(req,res) {
+	res.sendFile(path.join(__dirname + '/html/Untitled-1.html'))
+});
+
+app.get('/style.css', function(req,res) {
+	res.sendFile(path.join(__dirname + '/html/style.css'))
+});
+
+
+// -------------------------- status-app --------------------------------
+var data = null;
+
 const sqlite3 = require('sqlite3')
 
 let db = new sqlite3.Database("./mydb.sqlite3", (err) => { 
@@ -17,23 +30,6 @@ let db = new sqlite3.Database("./mydb.sqlite3", (err) => {
     } 
 })
 
-
-var data = null;
-function getName(item) {
-	return item.Name;
-}
-
-function getStatus(item) {
-	return item.Status;
-}
-
-app.get('/', function(req,res) {
-	res.sendFile(path.join(__dirname + '/html/Untitled-1.html'))
-});
-
-app.get('/style.css', function(req,res) {
-	res.sendFile(path.join(__dirname + '/html/style.css'))
-});
 
 app.get('/app/status-app', function(req,res) {
 	res.sendFile(path.join(__dirname + '/html/index.html'))
@@ -53,7 +49,6 @@ app.get('/app/status-app/api/init', function(req, res) {
 			}
 		})
 	} else {
-		// console.log(data)
 		res.setHeader('Content-Type', 'application/json');
 		res.end(JSON.stringify(data));	
 	}
@@ -74,6 +69,9 @@ app.get('/app/status-app/api/update', (req, res) => {
 	res.send("OK")
 })
 
-// app.listen(5000);
-app.listen(5000, '172.26.9.56');
+// -------------------------- status-app --------------------------------
+
+
+app.listen(5000);
+// app.listen(5000, '172.26.9.56');
 
