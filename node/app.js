@@ -72,6 +72,6 @@ app.get('/app/status-app/api/update', (req, res) => {
 // -------------------------- status-app --------------------------------
 
 
-app.listen(5000);
-// app.listen(5000, '172.26.9.56');
+// app.listen(5000);
+app.listen(5000, '172.26.9.56');
 
