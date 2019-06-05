@@ -2,82 +2,171 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
 </head>
 <body>
+    <h2>Coaches Table</h2>
 
-<div id="myDIV" class="header">
-  <h2 style="margin:5px">My To Do List</h2>
-  <input type="text" id="myInput" placeholder="Title...">
-  <span onclick="newElement()" class="addBtn">Add</span>
-</div>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Coaches</th>
+      </tr>
+      <tr>
+        <td>Rapley,	Nickolas</td>
+        <td>Lokeya Venkatachalam/Vaishali Kshatriya</td>
+      </tr>
+      <tr>
+        <td>Troy,	Mit</td>
+        <td>Lokeya Venkatachalam/Vaishali Kshatriya</td>
+      </tr>
+      <tr>
+        <td>Gonzalez,	Rudy</td>
+        <td>Beth Newton/Elizabeth Gilligan</td>
+      </tr>
+      <tr>
+        <td>Barton,	Doug</td>
+        <td>Beth Newton/Elizabeth Gilligan</td>
+      </tr>
+      <tr>
+        <td>Wilderman,	Brian</td>
+        <td>Beth Newton/Elizabeth Gilligan</td>
+      </tr>
+      <tr>
+        <td>Weser,	Carrie</td>
+        <td>Beth Newton/Elizabeth Gilligan</td>
+      </tr>
+      <tr>
+          <td>Lewis,	Rob</td>
+          <td>Beth Newton/Elizabeth Gilligan</td>
+        </tr>
+        <tr>
+            <td>Ziegler,	Robert</td>
+            <td>Beth Newton/Elizabeth Gilligan</td>
+          </tr>
+          <tr>
+              <td>Cottrell,	Eric</td>
+              <td>Beth Newton/Elizabeth Gilligan</td>
+            </tr>
+            <tr>
+                <td>Cordero,	John</td>
+                <td>Beth Newton/Elizabeth Gilligan</td>
+              </tr>
+              <tr>
+                  <td>Miller,	Josh</td>
+                  <td>Beth Newton/Elizabeth Gilligan</td>
+                </tr>
+                <tr>
+                    <td>Bencze,	Jennifer</td>
+                    <td>Beth Newton/Elizabeth Gilligan</td>
+                  </tr><tr>
+                      <td>Cruz,	Norman</td>
+                      <td>Beth Newton/Elizabeth Gilligan</td>
+                    </tr><tr>
+                        <td>Brown,	Jason</td>
+                        <td>GBeth Newton/Elizabeth Gilligan</td>
+                      </tr> 
+                      
+                      
 
-<ul id="myUL">
-  <li>Hit the gym</li>
-  <li class="checked">Pay bills</li>
-  <li>Meet George</li>
-  <li>Buy eggs</li>
-  <li>Read a book</li>
-  <li>Organize office</li>
-</ul>
 
-<script>
-// Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
+                      <tr>
+                          <td>Vogel,	Josh</td>
+                          <td>Beth Newton/Elizabeth Gilligan</td>
+                        </tr>  
+                        <tr>
+                            <td>Avin,	Jason</td>
+                            <td>Nayan Busa/Xuelan Zhang</td>
+                          </tr>
+                            <tr>
+                                <td>Coady, Mark</td>
+                                <td>NNayan Busa/Xuelan Zhang</td>
+                              </tr> 
+                              
+                              <tr>
+                                  <td>Parreco,	April</td>
+                                  <td>Nayan Busa/Xuelan Zhang</td>
+                                </tr> 
+                                <tr>
+                                    <td>Brignoni,	Gladys</td>
+                                    <td>Nayan Busa/Xuelan Zhang</td>
+                                  </tr> 
 
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
+                                  <tr>
+                                      <td>Grawe,	Bill</td>
+                                      <td>Nayan Busa/Xuelan Zhang</td>
+                                    </tr> 
+                                <tr> 
+                              <td>Bowen,	Josh</td>
+                              <td>Supriya Mishra/Gowrishankar Lakshminarayanan</td>
+                            </tr>  
+                            <tr>
+                                <td>Yarnell,	Angela</td>
+                                <td>Supriya Mishra/Gowrishankar Lakshminarayanan</td>
+                              </tr>  
+                              <tr>
+                                  <td>Mierva,	Zachary</td>
+                                  <td>Supriya Mishra/Gowrishankar Lakshminarayanan</td>
+                                </tr>  
+                                <tr>
+                                    <td>Bew,	Curtis</td>
+                                    <td>Supriya Mishra/Gowrishankar Lakshminarayanan</td>
+                                  </tr>  
+                                  <tr>
+                                      <td>Johnson,	Wayne</td>
+                                      <td>Kalyan Jakka/Chad Jiang</td>
+                                    </tr>  
+                                    <tr>
+                                        <td>Schmoke,	Julian</td>
+                                        <td>Kalyan Jakka/Chad Jiang</td>
+                                      </tr>  
+                                      <tr>
+                                          <td>Minor,	Robin</td>
+                                          <td>Kalyan Jakka/Chad Jiang</td>
+                                        </tr>  
+                                        <tr>
+                                            <td>Greene,	Chris</td>
+                                            <td>Kalyan Jakka/Chad Jiang</td>
+                                          </tr>  
+                                          <tr>
+                                              <td>Dean,	Michael</td>
+                                              <td>Kalyan Jakka/Chad Jiang</td>
+                                            </tr>  
+                                            <tr>
+                                                <td>O'Brien,	Marianna</td>
+                                                <td>Kalyan Jakka/Chad Jiang</td>
+                                              </tr>  
+                                              <tr>
+                                                  <td>Priceline</td>
+                                                  <td>Lokeya Venkatachalam/Vaishali Kshatriya</td>
+                                                </tr>  
+                                                <tr>
+                                                    <td>Synapse</td>
+                                                    <td>Laura Robertson/Darrell Platz</td>
+                                                  </tr>  
+                                                  <tr>
+                                                      <td>Consultant</td>
+                                                      <td>Beth Newton/Elizabeth Gilligan</td>
+                                                    </tr>  
+                              
 
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-
-// Create a new list item when clicking on the "Add" button
-function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
-}
-</script>
+    </table>
 
 </body>
 </html>
